@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <div class="top-bar-item">
+                <img src="../static/resources/logo.png" alt="Movie Recommender Logo" style="width: 60px; height: 60px">
+            </div>
+            <div class="top-bar-item">
+                <h2>Movie Recommender</h2>
+            </div>
+        </div>
+        <form id="recommendationForm" class="top-bar-right">
+            <div class="top-bar-item inputBox">
+                <input id="title" name="title" type="text" required="required" oninput="showSuggestions()">
+                <div id="suggestions"></div>
+                <span>Movie title</span>
+                <i></i>
+            </div>
+            <div class="top-bar-item">
+                <button type="submit" class="btn">Find movies</button>
+            </div>
+        </form>
+    </div>
+
+   <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>The film with the given title does not exist in the database</h2>
+            <p>Select one of the displayed titles in the suggestions</p>
+        </div>
+    </div>
+
+    <div id="recommendations">
+        <div class="row">
+            <div class="column">
+                <a href="https://www.themoviedb.org/movie/278-the-shawshank-redemption?language=en-US" target="_blank">
+                    <img class="image" src="../static/resources/image1.jpg" alt="The Shawshank Redemption">
+                    <div class="text">The Shawshank Redemption</div>
+                </a>
+            </div>
+            <div class="column">
+                <a href="https://www.themoviedb.org/movie/238-the-godfather?language=en-US" target="_blank">
+                    <img class="image" src=../static/resources/image2.jpg alt="The Godfather">
+                    <div class="text">The Godfather</div>
+                </a>
+            </div>
+            <div class="column">
+                <a href="https://www.themoviedb.org/movie/238-the-godfather?language=en-US" target="_blank">
+                    <img class="image" src=../static/resources/image3.jpg alt="The Dark Knight">
+                    <div class="text">The Dark Knight</div>
+                </a>
+            </div>
+            <div class="column">
+                <a href="https://www.themoviedb.org/movie/389-12-angry-men?language=en-US" target="_blank">
+                    <img class="image" src=../static/resources/image4.jpg alt="12 Angry Men">
+                    <div class="text">12 Angry Men</div>
+                </a>
+            </div>
+            <div class="column">
+                <a href="https://www.themoviedb.org/movie/550-fight-club?language=en-US" target="_blank">
+                    <img class="image" src=../static/resources/image5.jpg alt="Fight Club">
+                    <div class="text">Fight Club</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-bar">
+
+    </div>
+
+    <script src="../static/request.js"></script>
+    <script src="../static/appearance.js"></script>
+</body>
+</html>
